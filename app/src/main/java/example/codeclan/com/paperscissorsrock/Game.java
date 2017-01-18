@@ -18,21 +18,27 @@ public class Game
         playerChoice = 0;
     }
 
-    public String runGame(int playerChoice, int computerChoice){
+    public String runGame(int playerChoice, int computerChoice) {
         if (playerChoice == 1 && computerChoice == 1) {
-            return "player chose rock computer chose rock so you draw";
+            return "You chose rock. \nThe computer chose rock. \nYou draw";
         } else if (playerChoice == 1 && computerChoice == 2) {
-            return "player chose rock computer chose paper so you lose";
+            return "You chose rock. \nThe computer chose paper. \nYou lose";
         } else if (playerChoice == 1 && computerChoice == 3) {
-            return "player chose rock computer chose scissors so you win";
+            return "You chose rock. \nThe computer chose scissors. \nYou win";
+        } else if (playerChoice == 2 && computerChoice == 1) {
+            return "You chose paper. \nThe computer chose rock. \nYou win";
         } else if (playerChoice == 2 && computerChoice == 2) {
-            return "player chose paper computer chose paper so you draw";
+            return "You chose paper. \nThe computer chose paper. \nYou draw";
         } else if (playerChoice == 2 && computerChoice == 3) {
-            return "player chose paper computer chose scissors so you lose";
+            return "You chose paper. \nThe computer chose scissors. \nYou lose";
         } else if (playerChoice == 3 && computerChoice == 3) {
-            return "player chose scissors computer chose scissors so you draw";
-        } else {
-            return "you have broken the game";
+            return "You chose scissors. \nThe computer chose scissors. \nYou draw";
+        } else if (playerChoice == 3 && computerChoice == 1) {
+            return "You chose scissors. \nThe computer chose rock. \nYou lose";
+        } else if (playerChoice == 3 && computerChoice == 2) {
+            return "You chose scissors. \nThe computer chose so. \nYou win";
+        }else{
+            return "Something is wrong. Try again";
         }
     }
 }

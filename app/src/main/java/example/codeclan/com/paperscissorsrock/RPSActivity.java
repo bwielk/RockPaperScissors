@@ -42,8 +42,8 @@ public class RPSActivity extends AppCompatActivity {
         Game rock = new Game();
         String result = rock.runGame(1, computerChoice);
         displayResult.setText(result);
-        intent.putExtra("answer", result);
-        startActivity(intent);
+//        intent.putExtra("answer", result);
+//        startActivity(intent);
     }
 
     public void pushPaper(View button) {
